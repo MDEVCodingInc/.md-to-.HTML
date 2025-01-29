@@ -1,4 +1,9 @@
 # GitHub Docs
+## How to use
+1. Open terminal
+2. Go to the correct directory
+3. Use `python md_to_html.py YOUR_MD_HERE.md example.html
+`
 ## Contributing
 ### Ways to contribute
 We welcome contributions from the community! Here are some ways you can get involved:
@@ -7,13 +12,9 @@ We welcome contributions from the community! Here are some ways you can get invo
 * __👩‍💻Submit Pull Requests__: We appreciate your help in fixing bugs, adding new features, or improving documentation.
 * __🙋‍♀️Join Discussions__: Participate in discussions to share your ideas and feedback.
 * __🍿Donate__: Help us by buying us a coffee [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E019PPL7)
-## Licences
-> [!CAUTION]
-> Our paid projects have the licence the client wants it to have.
-
-> [!TIP]
-> However, the documents in this repository are __while they are in this repo__ open sourced and bound to the MIT Licence
-
+## Licence
+> [!IMPORTANT]
+> __Under the MIT Licence__
 ## README's
 We believe in clear and comprehensive documentation. If you have suggestions for improving our README files or want to contribute to them, please feel free to submit a pull request.
 
