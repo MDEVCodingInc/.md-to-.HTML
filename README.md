@@ -14,7 +14,7 @@ We welcome contributions from the community! Here are some ways you can get invo
 * __🍿Donate__: Help us by buying us a coffee [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E019PPL7)
 ## Licence
 > [!IMPORTANT]
-> __Under the MIT Licence__
+> Under the __MIT Licence__
 ## README's
 We believe in clear and comprehensive documentation. If you have suggestions for improving our README files or want to contribute to them, please feel free to submit a pull request.
 
