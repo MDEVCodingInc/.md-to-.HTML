@@ -1,9 +1,6 @@
 # GitHub Docs
 ## How to use
-1. Open terminal
-2. Go to the correct directory
-3. Use `python md_to_html.py YOUR_MD_HERE.md example.html
-`
+Just open the .exe. Some browsers wil say it is not often downloaded, because I dont want to pay $300 to letthem say it is safe. But it is, you can read the source code to check if you want.
 ## Contributing
 ### Ways to contribute
 We welcome contributions from the community! Here are some ways you can get involved:
