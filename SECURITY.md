@@ -7,8 +7,9 @@ currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
+| 2.x.x   | :white_check_mark: |
 | 1.x.x   | :white_check_mark: |
-| 0.x.x   | :x:                |
+| 1.x.x-beta.x   | :x:                |
 
 ## Reporting a Vulnerability
 If you discover a security vulnerability, we encourage you to report it to us. Here’s how you can do it:
