@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import filedialog, messagebox
 import markdown
 import os
-from fpdf import FPDF
 import pandas as pd
 from bs4 import BeautifulSoup
 import json
@@ -47,26 +46,6 @@ def convert_html_to_md(html_file_path, md_file_path):
         return "Error: Could not write to file."
 
     return md_file_path
-
-def convert_txt_to_pdf(txt_file_path, pdf_file_path):
-    try:
-        with open(txt_file_path, 'r', encoding='utf-8') as txt_file:
-            txt_text = txt_file.read()
-    except FileNotFoundError:
-        return "Error: The file does not exist."
-
-    pdf = FPDF()
-    pdf.add_page()
-    pdf.set_auto_page_break(auto=True, margin=15)
-    pdf.set_font("Arial", size=12)
-    pdf.multi_cell(0, 10, txt_text)
-
-    try:
-        pdf.output(pdf_file_path)
-    except IOError:
-        return "Error: Could not write to file."
-
-    return pdf_file_path
 
 def convert_csv_to_excel(csv_file_path, excel_file_path):
     try:
@@ -134,9 +113,6 @@ def convert_file():
     elif input_type == "HTML" and output_type == "Markdown":
         output_file_path = os.path.splitext(input_file_path)[0] + ".md"
         result = convert_html_to_md(input_file_path, output_file_path)
-    elif input_type == "TXT" and output_type == "PDF":
-        output_file_path = os.path.splitext(input_file_path)[0] + ".pdf"
-        result = convert_txt_to_pdf(input_file_path, output_file_path)
     elif input_type == "CSV" and output_type == "Excel":
         output_file_path = os.path.splitext(input_file_path)[0] + ".xlsx"
         result = convert_csv_to_excel(input_file_path, output_file_path)
@@ -171,10 +147,10 @@ tk.Entry(root, textvariable=input_file_var, width=50).grid(row=0, column=1, padx
 tk.Button(root, text="Browse", command=select_file).grid(row=0, column=2, padx=10, pady=10)
 
 tk.Label(root, text="Input type:").grid(row=1, column=0, padx=10, pady=10)
-tk.OptionMenu(root, input_type_var, "Markdown", "HTML", "TXT", "CSV", "JSON", "XML").grid(row=1, column=1, padx=10, pady=10)
+tk.OptionMenu(root, input_type_var, "Markdown", "HTML", "CSV", "JSON", "XML").grid(row=1, column=1, padx=10, pady=10)
 
 tk.Label(root, text="Output type:").grid(row=2, column=0, padx=10, pady=10)
-tk.OptionMenu(root, output_type_var, "HTML", "Markdown", "PDF", "Excel", "CSV", "JSON").grid(row=2, column=1, padx=10, pady=10)
+tk.OptionMenu(root, output_type_var, "HTML", "Markdown", "Excel", "CSV", "JSON").grid(row=2, column=1, padx=10, pady=10)
 
 tk.Checkbutton(root, text="Include CSS", variable=include_css_var).grid(row=3, column=0, padx=10, pady=10)
 tk.Entry(root, textvariable=css_file_var, width=50).grid(row=3, column=1, padx=10, pady=10)
